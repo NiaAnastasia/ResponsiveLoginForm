@@ -7,24 +7,24 @@
 
 body {
     min-height: 100vh;
-    background: url("https://www.cydesignation.co.jp/assets/data/5b23550a685d18aa1304490b46969e5f-800x1132.jpg") no-repeat center;
+    background: url(/img/bg-1.JPG) no-repeat center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    /* backdrop-filter: blur(40px); */
+    position: relative;
 }
-
 .blur-background {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     backdrop-filter: blur(40px);
-    z-index: -1;
+    z-index: 0;
 }
+
 .container {
     position: relative;
     z-index: 1;
@@ -53,7 +53,7 @@ body {
 }
 
 .col-1 {
-    background: url("https://www.cydesignation.co.jp/assets/data/5b23550a685d18aa1304490b46969e5f-800x1132.jpg") no-repeat center;
+    background: url(/img/bg-1.JPG) no-repeat center;
     background-size: cover;
 }
 
