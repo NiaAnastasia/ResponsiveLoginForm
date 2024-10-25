@@ -7,7 +7,7 @@
 
 body {
     min-height: 100vh;
-    background: url(/img/background.JPG) no-repeat center;
+    background: url("https://www.cydesignation.co.jp/assets/data/5b23550a685d18aa1304490b46969e5f-800x1132.jpg") no-repeat center;
     background-color: #000;
     background-size: cover;
     display: flex;
@@ -43,7 +43,7 @@ body {
 }
 
 .col-1 {
-    background: url(/img/background.JPG) no-repeat center;
+    background: url("https://www.cydesignation.co.jp/assets/data/5b23550a685d18aa1304490b46969e5f-800x1132.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -68,20 +68,7 @@ form {
     position: relative;
     width: 100%;
 }
-.login-box {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Slightly opaque */
-    border-radius: 1em;
-    padding: 2em;
-}
 
-/* Input fields */
-.login-box .user-box input {
-    background-color: rgba(255, 255, 255, 0.2);
-    /* Slightly transparent */
-    color: white;
-    /* Input text color */
-}
 .login-box .user-box input {
     width: 100%;
     padding: 10px 0;
@@ -136,6 +123,7 @@ form {
     background-color: transparent;
     color: white;
 }
+
 
 .remember {
     display: flex;
