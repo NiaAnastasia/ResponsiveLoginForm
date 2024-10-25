@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
 }
+
 body {
     min-height: 100vh;
     background: url(/bg.jpg) no-repeat center;
@@ -13,75 +14,118 @@ body {
     justify-content: center;
     color: white;
     backdrop-filter: blur(40px);
-
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    width: 1000px;
-    height: 600px;
+    grid-template-columns: 1fr;
+    /* One column by default */
+    width: 90%;
+    /* Full width with some padding */
+    max-width: 1000px;
+    /* Max width for larger screens */
+    height: auto;
+    /* Let height adjust based on content */
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(40px);
     border: 1px solid rgba(183, 183, 183, 0.2);
     border-radius: 2em;
     overflow: hidden;
-    margin: 0 5em;
+    margin: 2em auto;
+    /* Center the container */
+}
+
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        /* Two columns for tablets and up */
+        height: 600px;
+        /* Set a fixed height */
+    }
+
+    .col-1 {
+        height: auto;
+        /* Allow dynamic height */
+    }
 }
 
 .col-1 {
     background: url(/bg.jpg) no-repeat center;
     background-size: cover;
 }
+
 .col-1 img {
-    width: 700px;
+    width: 100%;
+    /* Make the image responsive */
+    height: auto;
+    /* Maintain aspect ratio */
 }
+
 .col-2 {
     display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
     align-items: center;
+    /* Center content */
     justify-content: center;
+    padding: 1em;
+    /* Add padding */
 }
+
 form {
-    margin-top: 2.7em;
+    margin-top: 2em;
+    /* Adjust margin for mobile */
 }
+
 .login-box .user-box {
     position: relative;
+    width: 100%;
+    /* Full width for inputs */
 }
+
 .login-box .user-box input {
     width: 100%;
     padding: 10px 0;
-    font-size: 22px;
+    font-size: 18px;
+    /* Adjust font size for mobile */
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    /* Adjust margin */
     border: none;
     border-bottom: 2px solid white;
     outline: none;
     background-color: transparent;
 }
+
 .login-box .user-box label {
     position: absolute;
     top: 0;
     left: 0;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 18px;
+    /* Smaller label size */
     color: white;
     pointer-events: none;
-    transition: 0.5 ease;
+    transition: 0.5s ease;
 }
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
     top: -20px;
     left: 0;
     color: white;
     font-size: 12px;
 }
+
 .login-box form a {
     margin: 0 auto;
     position: relative;
     display: inline-block;
-    padding: 15px 120px;
+    padding: 10px 60px;
+    /* Adjust button padding */
     color: black;
-    font-size: 18px;
+    font-size: 16px;
+    /* Smaller font size */
     font-weight: 500;
     background-color: white;
     border-radius: 25px;
@@ -89,21 +133,26 @@ form {
     text-transform: uppercase;
     overflow: hidden;
     transition: 0.4s ease;
-    margin-top: 30px;
+    margin-top: 20px;
+    /* Adjust spacing */
     letter-spacing: 1px;
     border: 3px solid white;
 }
+
 .login-box a:hover {
     background-color: transparent;
     color: white;
 }
+
 .remember {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    font-size: 18px;
+    font-size: 16px;
+    /* Smaller text */
     color: white;
 }
+
 .sign-up {
     display: flex;
     flex-direction: column;
@@ -112,14 +161,17 @@ form {
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
+    /* Smaller text */
 }
+
 .socials {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1em;
 }
+
 .socials i {
     padding: 10px;
     border-radius: 50%;
@@ -128,21 +180,59 @@ form {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
+
 .socials i:hover {
     background-color: white;
     color: black;
 }
-@media(max-width: 1000px){
+
+@media (max-width: 599px) {
     .container {
-        grid-template-columns: repeat(1,1fr);
-        width: 500px;
-        height: 850px;
+        padding: 1em;
+        /* Add padding for smaller screens */
     }
+
     .col-1 {
-        height: 250px;
+        height: 200px;
+        /* Adjust height for the image column */
     }
-    form{
-        margin: 5em auto;
+
+    .login-box .user-box input {
+        font-size: 16px;
+        /* Smaller input font size */
+    }
+
+    .login-box .user-box label {
+        font-size: 14px;
+        /* Smaller label font size */
+    }
+
+    .login-box a {
+        padding: 10px 30px;
+        /* Adjust button padding */
+        font-size: 16px;
+        /* Smaller button font size */
+    }
+
+    .remember,
+    .sign-up {
+        font-size: 14px;
+        /* Smaller text for these sections */
+    }
+
+    .socials {
+        flex-direction: row;
+        /* Keep social icons in a row */
+        justify-content: space-between;
+        /* Space them out */
+        width: 100%;
+        /* Ensure it takes full width */
+    }
+
+    .socials i {
+        font-size: 20px;
+        /* Adjust icon size */
+        padding: 8px;
+        /* Adjust padding for icons */
     }
 }
-
