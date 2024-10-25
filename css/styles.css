@@ -68,7 +68,20 @@ form {
     position: relative;
     width: 100%;
 }
+.login-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Slightly opaque */
+    border-radius: 1em;
+    padding: 2em;
+}
 
+/* Input fields */
+.login-box .user-box input {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Slightly transparent */
+    color: white;
+    /* Input text color */
+}
 .login-box .user-box input {
     width: 100%;
     padding: 10px 0;
